@@ -11,22 +11,14 @@ void setup() {
 }
 
 void loop() {
-  for(int i = 0; i <= 5; i++ ){
-    digitalWrite(Entrada1, HIGH);
-    delay(100);
-    digitalWrite(Entrada1, LOW);
-    delay(100);
-  }
-  for(int i = 0; i <= 5; i++){
-    digitalWrite(Entrada2, HIGH);
+ for(int i = 0; i <= 10; i++ ){
+    if (i % 1 == 0)
+        digitalWrite(Entrada1, !digitalRead(Entrada1));    //1 0 1 0 1 0 1 0 1 0 1
+    if (i % 3 == 0)
+        digitalWrite(Entrada2, !digitalRead(Entrada2));   // 0 0 1 1 1 0 0 0 1 1 1
+    if (i % 5 == 0)
+        digitalWrite(Entrada3, !digitalRead(Entrada3));   // 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 1 1 1 1 1
     delay(300);
-    digitalWrite(Entrada2, LOW);
-    delay(300);
-  }  
-  for(int i = 0; i <= 5; i++ ){
-    digitalWrite(Entrada3, HIGH);
-    delay(500);
-    digitalWrite(Entrada3, LOW);
-    delay(500);
-  }               
+
+}              
 }
