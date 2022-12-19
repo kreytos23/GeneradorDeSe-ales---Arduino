@@ -1,2 +1,2 @@
-# GeneradorDeSe-ales---Arduino
+# SignalGenerator----Arduino
 Generador de Funciones para arduino para matriz de conmutación
